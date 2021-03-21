@@ -144,11 +144,11 @@ int main() {
 
 			//look at extended ascii-table
 
-			if (distanceToWall <= depth / 4.0f)			shade = 0x2588; // Very close
+			if (distanceToWall <= depth / 4.0f)		shade = 0x2588; // Very close
 			else if (distanceToWall < depth / 3.0f)		shade = 0x2593;
 			else if (distanceToWall < depth / 2.0f)		shade = 0x2592;
-			else if (distanceToWall < depth)			shade = 0x2591;
-			else										shade = ' ';		// too far
+			else if (distanceToWall < depth)		shade = 0x2591;
+			else						shade = ' ';		// too far
 
 			if (boundary)	shade = ' ';
 
@@ -167,10 +167,9 @@ int main() {
 					else if (b < 0.5f)	shade = 'x';
 					else if (b < 0.75f)	shade = '.';
 					else if (b < 0.9f)	shade = '-';
-					else				shade = ' ';
+					else			shade = ' ';
 
 					screen[y * screenWidth + x] = shade;
-					//screen[y * screenWidth + x] = ' ';
 				}
 			}
 		}
